@@ -423,6 +423,7 @@
 <script>
 var loc0 = [2,1];
 var loc1 = [1,1];
+length=0
 document.onkeydown = checkKey;
 function checkKey(e) {
     e = e || window.event;
@@ -450,13 +451,12 @@ function checkKey(e) {
        direction = 0
     }
 }
-var it=0
+var step;
 var interval = window.setInterval(function(){
   ploc=[loc0[0],loc0[1],loc1[0],loc1[1]]
-  console.log('loop' + it)
-  it++
-  
-  
+  for(step = 0; step < length; step++) {
+	  document.getElementById(ploc[0],ploc[1]).checked = true
+  }
 }, 200);
 function lose() {
   clearInterval(interval)
