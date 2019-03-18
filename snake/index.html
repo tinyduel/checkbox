@@ -452,12 +452,13 @@ function checkKey(e) {
        direction = 0
     }
 }
+
+var step;
+var interval = window.setInterval(function(){
 if (direction == 0) { loc0[1]++}
 	else if (direction == 2) { loc0[1]--}
 	else if (direction == 3) { loc0[0]++}
 	else if (direction == 1) { loc0[0]--}
-var step;
-var interval = window.setInterval(function(){
   ploc=[loc0[0],loc0[1],loc1[0],loc1[1]]
   for(step = 0; step < length; step++) {
 	  document.getElementById(ploc[0],ploc[1]).checked = true
